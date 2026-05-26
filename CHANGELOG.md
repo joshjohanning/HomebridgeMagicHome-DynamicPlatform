@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 2026-05-26
+
+### Bug Fixes
+
+- Fixed plugin registration name to match scoped package name, resolving child bridge failures
+
 ## [2.0.0] - 2026-05-26
 
 ### Initial Release
