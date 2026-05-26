@@ -7,8 +7,7 @@
 
 
 # Homebridge MagicHome Dynamic Platform
-[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-%23181717?style=for-the-badge&logo=GitHub)](https://github.com/sponsors/Zacknetic)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-%2300457C?style=for-the-badge&logo=PayPal)](https://www.paypal.com/paypalme/zacharyavino)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-%2300457C?style=for-the-badge&logo=PayPal)](https://paypal.me/joshuajohanning)
 [![Discord](https://img.shields.io/badge/Chat-Discord-%237289DA?style=for-the-badge&logo=Discord)](https://discord.gg/c8xpmZSNZC)
 
 ### Join the [Official MagicHome Discord Channel](https://discord.gg/c8xpmZSNZC) for tech support and to chat with other MagicHome users
@@ -22,11 +21,11 @@ A Homebridge plugin for a range of Magic Home Wi-Fi lights and LED controllers.
 
 ## Installation
 
-First, install the plugin globally.
+Install from the Homebridge UI by searching for `@joshjohanning/homebridge-magichome-dynamic-platform`, or via the command line:
 
-````
-npm install -g homebridge-magichome-dynamic-platform
-````
+```bash
+sudo hb-service add @joshjohanning/homebridge-magichome-dynamic-platform
+```
 
 ## Use
 
