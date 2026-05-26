@@ -1,31 +1,39 @@
-name: Build and Lint
-
-on: [push, pull_request]
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        # the Node.js versions to build on
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [22, 24]
+    permissions:
+      contents: read
+      pull-requests: read
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - name: Use Node.js ${{ matrix.node-version }} 
-        uses: actions/setup-node@v1
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Lint the project
+      - name: Check npm version compatibility
+        uses: joshjohanning/npm-version-check-action@v2
+
+      - name: Run linting
         run: npm run lint
 
-      - name: Build the project
+      - name: Run build
         run: npm run build
-        env:
-          CI: true
