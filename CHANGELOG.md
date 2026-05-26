@@ -11,9 +11,10 @@ Fork of [Zacknetic/HomebridgeMagicHome-DynamicPlatform](https://github.com/Zackn
 - Renamed package to `@joshjohanning/homebridge-magichome-dynamic-platform`
 - Updated Node.js engine requirement to `^22.12.0 || ^24.0.0`
 - Updated Homebridge engine requirement to `^1.6.0 || ^2.0.0` (Homebridge v2 compatible)
-- Upgraded TypeScript from 3.9 to 5.x
+- Upgraded TypeScript from `3.9` to `5.x`
 - Added `skipLibCheck: true` to tsconfig to support Homebridge v2 matter type declarations
 - Fixed firmware version comparison type error (`string | number` narrowed via `Number()`)
 - Updated repository, bugs, and homepage URLs to fork
 - Added funding metadata
 - Added CI and publish workflows for automated testing and package publishing
+- Added migration guide and installation instructions to README
