@@ -6,4 +6,4 @@ export const PLATFORM_NAME = 'homebridge-magichome-dynamic-platform';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-magichome-dynamic-platform';
+export const PLUGIN_NAME = '@joshjohanning/homebridge-magichome-dynamic-platform';
