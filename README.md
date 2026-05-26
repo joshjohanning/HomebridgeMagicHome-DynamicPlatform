@@ -15,6 +15,9 @@
 
 ## About
 
+> [!TIP]
+> This is a drop-in replacement for the original [`homebridge-magichome-dynamic-platform`](https://github.com/Zacknetic/HomebridgeMagicHome-DynamicPlatform) plugin with explicit Homebridge 2 support. See [Migrating from `homebridge-magichome-dynamic-platform`](#migrating-from-homebridge-magichome-dynamic-platform) for setup steps.
+
 A Homebridge plugin for a range of Magic Home Wi-Fi lights and LED controllers.
 
 ## Installation
@@ -53,7 +56,7 @@ When the retical moves closer to the center of the color wheel, the saturation %
 
 ## Configuration
 
-Please setup your config in Config UI X under ```Plugins>Homebridge MagicHome Dynamic Platform>Settings.``` 
+Please setup your config in Config UI X under ```Plugins>Homebridge MagicHome Dynamic Platform>Settings.```
 However the default settings should suffice. Please read below to learn more about the settings before changing anything.
 
 ### Settings
@@ -81,3 +84,57 @@ However the default settings should suffice. Please read below to learn more abo
 * `blacklistOrWhitelist` - **blacklist** / **whitelist** Whether the listed Unique IDs are blacklisted or whitelisted.
 
 * `blacklistedUniqueIDs` - **Alphanumeric** Unique IDs of devices you wish this plugin to ignore/delete. Can be found in the Magichome app under "MAC Address" or in the logs under "Unique ID". **i.e. 6001940EDC1F**
+
+## Migrating from `homebridge-magichome-dynamic-platform`
+
+This package can be used as a drop-in replacement for the original [homebridge-magichome-dynamic-platform](https://www.npmjs.com/package/homebridge-magichome-dynamic-platform) plugin.
+
+Existing Homebridge config entries can stay the same. Your existing HomeKit accessories should keep their identity as long as you do not delete cached accessories or remove/re-pair the Homebridge bridge.
+
+### Safe migration steps
+
+1. Back up Homebridge from the Homebridge UI.
+2. Stop Homebridge:
+
+   ```bash
+   sudo hb-service stop
+   ```
+
+3. Remove the original plugin:
+
+   ```bash
+   sudo hb-service remove homebridge-magichome-dynamic-platform
+   ```
+
+4. Install this fork:
+
+   ```bash
+   sudo hb-service add @joshjohanning/homebridge-magichome-dynamic-platform
+   ```
+
+5. Start Homebridge:
+
+   ```bash
+   sudo hb-service start
+   ```
+
+6. Check the Homebridge logs:
+
+   ```bash
+   sudo hb-service logs
+   ```
+
+7. Verify your existing MagicHome lights still work in Apple Home.
+
+### Important notes
+
+Do not remove cached accessories from Homebridge unless you intentionally want HomeKit to recreate them. Removing cached accessories may break room assignments, scenes, and automations that reference those lights.
+
+### Updating this fork
+
+When a new version is published to npm, update it from the Homebridge UI, or run:
+
+```bash
+sudo hb-service add @joshjohanning/homebridge-magichome-dynamic-platform
+sudo hb-service restart
+```
