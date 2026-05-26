@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.2] - 2026-05-26
+
+### Bug Fixes
+
+- Reverted plugin identifier in `registerPlatform()` and `PLUGIN_NAME` back to the unscoped `homebridge-magichome-dynamic-platform` to preserve compatibility with accessories cached under the original upstream plugin identifier.
+- Added explicit `npm run build` step to the publish workflow. Previous releases (`2.0.0`, `2.0.1`) shipped without a `dist/` folder because `npm pack` does not trigger the `prepublishOnly` script, so the plugin could not be loaded by Homebridge.
+
 ## [2.0.1] - 2026-05-26
 
 ### Bug Fixes
 
-- Fixed plugin registration name to match scoped package name, resolving child bridge failures
+- Attempted (incorrectly) to change plugin registration name to match scoped package name. Superseded by 2.0.2. Also did not ship `dist/`.
 
 ## [2.0.0] - 2026-05-26
 

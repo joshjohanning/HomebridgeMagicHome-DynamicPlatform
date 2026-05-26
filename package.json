@@ -2,7 +2,7 @@
   "private": false,
   "displayName": "Homebridge MagicHome Dynamic Platform",
   "name": "@joshjohanning/homebridge-magichome-dynamic-platform",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Dynamically Discover and Add MagicHome Bulbs and Controllers to Homebridge; forked from Zacknetic/HomebridgeMagicHome-DynamicPlatform.",
   "license": "Apache-2.0",
   "author": {
