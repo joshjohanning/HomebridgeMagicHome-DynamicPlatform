@@ -1,12 +1,12 @@
 
 <p align="center">
 
-<img src="https://github.com/Lethegrin/HomebridgeMagicHome-DynamicPlatform/blob/master/branding/logos/zackneticlogo.svg" width="150">
+<img src="branding/logos/zackneticLogo-NoName.svg" width="150">
 
 </p>
 
-
 # Homebridge MagicHome Dynamic Platform
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-%2300457C?style=for-the-badge&logo=PayPal)](https://paypal.me/joshuajohanning)
 [![Discord](https://img.shields.io/badge/Chat-Discord-%237289DA?style=for-the-badge&logo=Discord)](https://discord.gg/c8xpmZSNZC)
 
