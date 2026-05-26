@@ -1,34 +1,39 @@
 {
   "private": false,
   "displayName": "Homebridge MagicHome Dynamic Platform",
-  "name": "homebridge-magichome-dynamic-platform",
-  "contributors": [
-    "Zachary Avino ZackAvino@Zacknetic.org",
-    "Igor Ramos"
-  ],
-  "version": "1.9.7",
-  "description": "Dynamically Discover and Add MagicHome Bulbs and Controllers to Homebrige.",
+  "name": "@joshjohanning/homebridge-magichome-dynamic-platform",
+  "version": "2.0.0",
+  "description": "Dynamically Discover and Add MagicHome Bulbs and Controllers to Homebridge; forked from Zacknetic/HomebridgeMagicHome-DynamicPlatform.",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Zacknetic/HomebridgeMagicHome-DynamicPlatform"
+  "author": {
+    "name": "Josh Johanning"
   },
-  "bugs": {
-    "url": "https://github.com/Zacknetic/HomebridgeMagicHome-DynamicPlatform/issues"
-  },
-  "funding": [
+  "contributors": [
     {
-      "type": "github",
-      "url": "https://github.com/sponsors/Zacknetic"
+      "name": "Zachary Avino",
+      "email": "ZackAvino@Zacknetic.org"
     },
     {
+      "name": "Igor Ramos"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshjohanning/HomebridgeMagicHome-DynamicPlatform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshjohanning/HomebridgeMagicHome-DynamicPlatform/issues"
+  },
+  "homepage": "https://github.com/joshjohanning/HomebridgeMagicHome-DynamicPlatform#readme",
+  "funding": [
+    {
       "type": "paypal",
-      "url": "https://www.paypal.com/paypalme/ZacharyAvino"
+      "url": "https://www.paypal.com/paypalme/joshuajohanning"
     }
   ],
   "engines": {
-    "node": ">=10.17.0",
-    "homebridge": ">0.4.53"
+    "node": "^22.12.0 || ^24.0.0",
+    "homebridge": "^1.6.0 || ^2.0.0"
   },
   "main": "dist/index.js",
   "scripts": {
@@ -63,15 +68,15 @@
     "promise-queue": "^2.2.5"
   },
   "devDependencies": {
-    "@types/node": "^14.0.23",
+    "@types/node": "^22.19.19",
     "@types/promise-queue": "^2.2.0",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
-    "homebridge": "^1.1.1",
+    "homebridge": "^2.0.2",
     "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "typescript": "^5.9.3"
   }
 }
